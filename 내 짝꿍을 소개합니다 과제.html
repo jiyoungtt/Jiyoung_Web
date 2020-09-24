@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Cookie|Do+Hyeon|Fredoka+One|Sunflower:300|Tajawal|Viga" rel="stylesheet">
+
+<style >
+
+
+
+	*{
+		font:sans-serif;
+		margin: 0;
+		padding: 0;
+	} 
+	
+	li
+	{
+		list-style: none;
+		font-family: 'Fredoka One', cursive;
+	
+	}
+	.outer-menu-item
+	{
+		display: block;
+        	height:30px; width:80px;
+        	float: left;
+        	padding: 5px 20px;
+        	text-align: center;
+        	line-height:30px;
+        	
+	}
+	
+	a{text-decoration: none;}
+	
+	body
+	{
+		background-color: #FADFF4;
+		width: 960px;
+		margin: 0 auto;
+	}
+	
+	#page-wrapper
+	{
+		background-color: white;
+		margin: 40px 0 0 0;
+		padding: 10px 20px;
+	}
+	
+	.outer-menu-item
+	{
+		display: block;
+		height: 30px;width: 80px;
+		float: left;
+		padding: 5px 20px;
+		text-align: center;
+		line-height: 20px;
+		font-family: 'Fredoka One', cursive;
+	}
+
+	
+	
+	.master-title
+	{
+		font-family: 'Do Hyeon', sans-serif;
+		font-size: 40px;
+	}
+
+	.master-description
+	{
+		font-family: 'Barlow Semi Condensed', sans-serif;
+		font-size: 15px;
+	}
+
+	footer{font-family: 'Cookie', cursive;}
+
+	.article-body
+	{
+		font-family: 'Sunflower', sans-serif;
+		font-size: 14px;
+	}
+	.article-title
+	{
+		font-family: 'Viga', sans-serif;
+		font-size: 25px;
+	}
+	.article-date
+	{
+		font-family: 'Tajawal', sans-serif;
+		font-size: 13px;
+	}
+	
+	#main-navigation
+	{ 
+		/*border-top: 2px solid #FF64E3;*/
+		border-bottom: 2px solid #FF64E3;
+		height: 40px;
+		margin:20px 0 30px 0;
+		font-family: 'Fredoka One', cursive;
+		
+	}
+	.outer-menu-item{color: 28A0FF;}
+
+	.pull-left
+	{
+		height: 40px;
+		float: left;
+	}
+	 
+	.pull-right
+	{
+		padding: 7px;
+		height: 40px;
+		float: right;
+	}
+	#main-section
+	{
+		width: 710px;
+		float: left;
+	}
+
+	#content{overflow: auto;}
+	article
+	{
+		padding: 0 10px 20px 10px;
+		border-bottom: 2px solid #FF64E3;
+
+	}
+
+	nav>ul{overflow: hidden;}
+	nav>ul>li
+	{
+		float: left;
+		font-family: 'Fredoka One', cursive;
+	}
+	nav>ul>li>a
+	{
+		display: block;
+		width: 100px;
+		height: 35px;
+		padding: 10px;
+		text-align: center;
+		line-height: 35px;
+	/*	border:1px solid pink; */
+	}
+	nav>ul>li>a:hover
+	{
+		color: white;
+		background-color: #B0F7FF;
+	}
+	nav>ul>li>a
+	{ 
+		border-radius: 15px 15px 15px 15px;
+
+	}
+
+	#Q>li>a:hover
+{
+	color: white;
+	background-color: pink;
+}
+
+.article-header{padding: 20px 0;}
+	
+	#main-header > nav
+	{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+	}
+   aside
+        {
+        	float: right;
+        	width: 205px; /*이부분이 가장 문제다!!*/
+        } 
+        input:nth-of-type(1){display: none;}
+        input:nth-of-type(1) ~ div:nth-of-type(1){display: none;}
+        input:nth-of-type(1):checked ~ div:nth-of-type(1){display: block;}
+
+        input:nth-of-type(2){display: none;}
+        input:nth-of-type(2) ~ div:nth-of-type(2){display: none;}
+        input:nth-of-type(2):checked ~ div:nth-of-type(2){display: block;}
+
+        section.tab-title{overflow: hidden;}
+        section.tab-title > label{
+        	display:block;
+        	float: left;
+        	width: 100px;
+        	height: 30px;
+        	line-height: 30px;
+        	text-align: center;
+        	border: 1px solid #FF64E3;
+
+        	background: white;
+        	color: pink;
+        }
+        input:nth-of-type(1):checked ~ section.tab-title > label:nth-of-type(1){background: #B0F7FF;
+        	color: pink;}
+        	input:nth-of-type(2):checked ~ section.tab-title > label:nth-of-type(2){background: #B0F7FF;
+        	color: pink;}/*라벨클릭했을때 배경색과 글씨색 변경 */
+
+
+        	.item{
+        		overflow: hidden;
+        		width: 182px;
+        		padding: 10px;
+        		border: 1px solid #FF64E3;
+                border-top: none;
+        	}
+        	.thumbnail{
+        	
+        	}
+        	.description{
+        		float: left;
+        		margin-left: 10px;
+        	}
+
+
+#Q{
+	display:block;
+	float: right;
+	text-align: center;
+	padding: 120px 0 0 0;
+  }
+ 
+ #Q>li
+ {
+ 	font-size: 20px;
+ 	font-family: 'Sunflower', sans-serif;
+ 	position: relative;
+ 	overflow: hidden;
+ 	color: black;
+ }
+
+
+
+
+strong{font-family: 'Do Hyeon', sans-serif;
+
+/*font-family: 'Barlow Semi Condensed', sans-serif;*/}
+
+nav ul li{color: pink;}
+
+.pic4{float: left;}
+.article-body{overflow: hidden;}
+/*
+font-family: 'Do Hyeon', sans-serif;//대제목--적용
+font-family: 'Fredoka One', cursive;//탭바--적용 
+font-family: 'Cookie', cursive;//footer--적용
+font-family: 'Barlow Semi Condensed', sans-serif;//과와내이름--적용
+font-family: 'Viga', sans-serif;//기사큰제목--적용
+font-family: 'Tajawal', sans-serif;//기사소제목--적용
+font-family: 'Sunflower', sans-serif;//기사내용--적용
+*/
+
+#ASK span{margin:  50px 0 0 0;}
+
+
+
+#pic4{float: left;}
+#pic44 li
+{
+	padding:  130px;
+	float: left;
+	font-family: 'Sunflower', sans-serif;
+}
+#mystory
+{
+	font-family: 'Sunflower', sans-serif;
+	font-size: 14px;
+}
+#ASK >li {font-family: 'Barlow Semi Condensed', sans-serif;}
+#tips li{font-family: 'Viga', sans-serif;}
+	</style>
+
+
+
+	<title>여의도 한강공원을 소개합니다~</title>
+
+</head>
+<body>
+
+<div id="page-wrapper">
+
+	<header id="main-header">
+		<h1 class="master-title" style="font-family: 'Do Hyeon', sans-serif;">지영이의 봄가득 서울길~</h1>
+		<h2 class="master-description">건국대학교  스마트ICT융합공학과  장지영</h2>
+	</header>
+
+	<nav id="main-navigation">
+<!--		<div class="pull-left"> -->
+			<ul class="outer-menu">
+				<li class="outer-menu-item"><a href="#me">ME</a></li>
+				<li class="outer-menu-item"><a href="#you">YOU</a></li>
+				<li class="outer-menu-item"><a href="#park">PARK</a></li>
+				<li class="outer-menu-item"><a href="#tips">TIPS</a></li>
+			</ul>
+	<!--	</div> -->
+
+
+
+<!---		<div class="pull-right"><!------이건 지금 검색버튼인데 이게 필요할지는 몰겠응 ㅎㅎ
+			<form>
+			<input type="text" class="input-search">
+			<input type="submit" class="input-search-submit" value="검색">	
+			</form>
+			</div>  ---->
+
+	</nav>
+
+
+
+
+	<div id="content">
+		<section id="main-section">
+
+			<article>
+				<div class="article-header">
+				<a name="me"><h1 class="article-title">너와나의인연</h1></a>
+					<p class="article-date">나는 누구?!& 내 짝꿍이 되어줘!</p>
+				</div>
+				<div class="article-body">
+					<img src="1stpic.jpg" width="300" height="230">
+					<p>안녕하세요★ 저는 프로그래밍을 좋아하지만 아직은 많이 많이 서툰 지영이 입니다! 전체 수강신청날!!! 가슴 졸이며 광클을 한 이유!! 바로 웹프로그래밍 수업을 듣기위해!!! 어딜가나 자바스크립트 자바스크립트! 너무 배우고 싶었습니다!~ 두근두근! 비록 원하는 시간대는 아니었지만 수강신청에 성공해서 너무나도 기뻤습니다~ 하.지.만 고등학교 졸업 이후 처음 듣는 1교시.... 첫 수업부터 허겁지겁 겨우겨우 세이브 해서 들어갔습니다! 타과생이어서 기도 많이 죽어있었습니다! 하지만 교수님의 특유의 밝은 분위기로 수업이 즐거울 것으로 예상되었습니다! 그리고 내 옆자리에 앉은 한 사람!! 바로 김선정언니! 1교시라 정신도 비몽사몽하고 긴장도 한 탓에 처음에는 언니에게 밝게 인사하지 못했습니다. 어쩌면 오히려 예의없어 보였을지도 모릅니다. 그리고 짝꿍정하기!! 아는 사람이 단 한명도 없어 걱정이 많았는데  언니가 먼저 짝꿍할 사람 없으면 함께하자고 했습니다!! 어찌나 기쁘던지!!  그 뒤로 선정이 언니와 맨 앞에 앉아서 늘 같이 수업을 들었습니다! 많이 어색했지만 함께 자전거도 타러 갔습니다. 원래가기로 한 날에는 비가 갑자기 주륵주륵와서 그 다음주로 미뤘고, 또 가기로 한 날에는 엄청난 미세먼지와 강풍에 당황하고 추웠지만 그래도 저희는 열심히 자전거를 탔답니다~ 그리고 이제는 간간히 카톡으로 수업내용 질문도 한답니다~
+                 </p>
+                 </div>
+			</article>
+
+			<article>
+				<div class="article-header">
+				<a name="you">	<h1 class="article-title">내 짝꿍을 소개합니다</h1></a>
+					<p class="article-date">내 짝꿍에 관한 모든 것</p>
+				</div>
+				<div class="article-body">
+					<section id="2-section">
+					<img src="2ndpics.jpg" width="300" height="230">
+					<p>
+						50문 50답을 통해 선정언니의 취향을 바로 파악할 수 있다!!
+					</p>
+					<p>
+						그녀의 한마디★어떻게든 살 길은 있다!
+					</p>
+				<!--	-->
+				</div>
+			</article>
+
+			<article>
+				<div class="article-header">
+				<a name="park" >	<h1 class="article-title">이곳을 소개합니다</h1></a>
+					<p class="article-date">여기는 여의도 한강공원</p>
+				</div>
+				<div class="article-body">
+					<img src="3.jpg" width="300" height="230">
+					<p>여의나루1번 출구로 나오니 많은 따릉이들이 우리를 기다리고 있었습니다. 그 중에서 우리를 태울 행운의 따릉이들을 타고 여의도 한강공원으로 진입합니다! 자전거를 타며 한강의 낭만을 즐기다 보면 국회의사당이 보입니다~ 
+                   서울의 자랑 한강!! 그리고 한강공원의 으뜸 여의도 한강공원!!
+                   제가 여의도 한강공원에 가자고 제가 정말 강하게 어필했습니다! 꼭 가고싶다고! 저는 한강을 좋아하는데, 특히 여의도 한강공원을 좋아합니다. 여의도 한강공원은 다른 한강공원들 보다 사람을 생각하는, 사람을 위한 공원이라는 느낌이 강합니다. 계곡같은 느낌의 분수?가 있어서 여름에 아이들이 그곳에서 물놀이를 하기도 하고요, 주변 도심의 높은 건물(심지어 63빌딩)사이에서 사람들이 자연에 가까이 다가갈 수 있게 해주는 그런 공원입니다. 그래서 제가 매우 애정하는 장소입니다. 그리고 자전거를 탄 이유는 걷는것 보다는 자전거를 타야지 그 장소의 매력을 제대로 느낄 수 있기 때문입니다!
+                   저의 사랑 여의도 공원이 더 궁금하시다면 <a href="http://gil.seoul.go.kr/walk/course/etc_gil.jsp?upper_code_idx=1000&c_idx=172&pagenum=6#detail">여기 클릭</a> 
+                   </p>
+				</div>
+			</article>
+
+			<article>
+
+				<div class="article-header">
+				<a name="tips">	<h1 class="article-title">이렇게 다녀오세요</h1></a>
+					<p class="article-date">나만 믿고 따라와~</p>
+				</div>
+				
+				<div class="article-body">
+
+					<div class="pic4">
+					<img src="4444.jpg" width="300" height="230" >
+				</div>
+
+                      <div class="pic44">     
+	 				<p>
+	 				
+	 					<ol id="tips" type="1">
+	 						<li>☆☆☆☆☆여☆의☆도☆한☆강☆공☆원☆꿀☆팁☆☆☆☆☆</li>
+	 						<li>★★★★★★★★★★★★★★★★★★★★★★★★★★★</li>
+	 						<li>★1,따릉이 앱은 미리미리 다운받기</li>
+	 						<li>★2,국회의사당은 낮보다는 밤이 더 예쁘다</li>
+	 						<li>★3,배가 고프다면 한강라면과 치맥~</li>
+	 						<li>★4,여의도 한강공원에는 늘!! 사람이 많고, 자전거 도로를 사람★들이 많이 지나다니기때문에 안전 주의!</li>
+	 						<li>★5,자전거는 날이 따뜻해지면 타세요~ 바람이 많이 불어 매우★춥습니다!</li>
+	 						<li>★★★★★★★★★★★★★★★★★★★★★★★★★★★</li>
+	 					</ol>
+
+                    </p>
+                </div>
+				</div>
+			<p id="mystory">처음에는 정말이지 이 과제가 너무 부담스러웠다. 모르는 사람과 어색하게 서울의 둘레길을 걸어야 한다니!! 정말이지 만나는 모든 사람들에게 하소연을 하였다! 하지만 어쩔 수 없이 과제를 해야 했고, 결국 만나기로 한 날이 다가왔다! 정말이지 처음 만나기로 한 날에는 비가 와서 취소하였고, 두 번째 만나기로 한 날에는 강풍이었다!(사실 첫 번째 꺼 취소되었을 때 기뻤다.) 하지만!! 나의 이 걱정과 근심과는 달리! 막상 생각만큼 죽을 것처럼 어색하지 않았다!! 오히려 재밌었다! 50문 50답에 해당하는 50개의 질문을 생각해 내는 것도 생각만큼 쉽지 않았다! 나중에는 정말 더 사소한 것까지 물어보게 되었다. 그리고 나의 질문과 내 짝꿍의 질문이 참 많이 다르다는 점도 너무 흥미로웠다. 그 문답을 통해 내 짝꿍에 대해서 더 잘 알아갈 수 있었고, 분위기가 덜 어색했던 것 같다! 책상에만 앉아서 하는 팀플이 아니고 진짜 교수님이 첫 시간에 말씀하신 것처럼 낭만 있는 팀플이었던 것 같다. 앞으로 이런 팀플 대 환영이다!! 그리고 스스로 웹페이지의 레이아웃을 구상하는 것부터, 직접 만드는 것까지 그 과정이 너무 소중했다. 세상에는 단 하나뿐이라는 자부심을 가지며 만들었던 것 같다. 정말이지 너무 어려워서 책을 찾아보기도 하고, 강의자료도 보고, 주변 사람들에게 질문도 하고 하나하나 해결해 나갔다. 한 줄 한 줄 눈에 보이게 나타나는 변화가 너무 좋았고, 뿌듯했다. 앞으로 더 배워서 더 재밌고, 멋진 것들을 만들 것이다!!! </p>
+			</article>
+
+		</section>
+
+
+        <aside id="main-aside">
+        	<input id=people type=radio name=tab checked=checked>
+        	<input id=landscape type=radio name=tab>
+        	<section class=tab-title>
+        		<label for=people>PEOPLE</label>
+        		<label for=landscape>LANDSCAPE</label>
+        	</section>
+
+        
+        <div class=tab-item>
+
+			<ul>
+				<li class="item"><a href=#>
+					<div class="thumbnail"><img src="pe3.jpg" width="180";>
+					</div>
+					<div class="description">
+						<strong></strong>
+					</div>
+				</a>
+			</li>
+				<li class="item"><a href=#>
+					<div class="thumbnail"><img src="pe21.jpg" width="180" ;>
+					</div>
+					<div class="description">
+						<strong></strong>
+					</div>
+				</a>
+			</li>
+			<li class="item">
+				
+					<div class="thumbnail">
+						<img src="pe1.jpg" width="180";>
+					</div>
+					<div class="description">
+						<strong></strong>
+					</div>
+				
+			</li>
+		</ul>	
+
+	</div>
+
+
+
+	<div class=tab-item>
+
+			<ul>
+				<li class="item">
+					<div class="thumbnail"><img src="lan1.jpg" width="182";>
+					</div>
+					<div class="description">
+						<strong></strong>
+					</div>
+				
+			</li>
+				<li class="item">
+					<div class="thumbnail"><img src="lan2.jpg" width="182">
+					</div>
+					<div class="description">
+						<strong></strong>
+					</div>
+				
+			</li>
+			<li class="item">
+					<div class="thumbnail"><img src="lan3.jpg" width="182">
+					</div>
+					<div class="description">
+						<strong></strong>
+					</div>
+				
+			</li>
+		</ul>	
+	</div>
+
+
+<div class="ASK">
+
+	<span>
+						<ol id="Q">
+
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='김선정'" onMouseOut="this.innerHTML='이름'">이름</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='24'" onMouseOut="this.innerHTML='나이'">나이</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='컴퓨터공학과'" onMouseOut="this.innerHTML='학과'">학과</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='96.09.28'" onMouseOut="this.innerHTML='생일'">생일</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='AB'" onMouseOut="this.innerHTML='혈액형'">혈액형</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='게임하기'" onMouseOut="this.innerHTML='취미'">취미</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='떡볶이'" onMouseOut="this.innerHTML='좋아하는 음식'">좋아하는 음식</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='내 방'" onMouseOut="this.innerHTML='좋아하는 장소'">좋아하는 장소</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='검정색'" onMouseOut="this.innerHTML='좋아하는 색깔'">좋아하는 색깔</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='메멘토'" onMouseOut="this.innerHTML='좋아하는 영화'">좋아하는 영화</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='유자차'" onMouseOut="this.innerHTML='좋아하는 디저트'">좋아하는 디저트</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='논리와 사고'" onMouseOut="this.innerHTML='추천 교양 수업'">추천 교양 수업</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='여우'" onMouseOut="this.innerHTML='좋아하는 동물'">좋아하는 동물</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='우마이도'" onMouseOut="this.innerHTML='추천맛집'">추천맛집</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='롯데백화점'" onMouseOut="this.innerHTML='주로 쇼핑하는 곳'">주로 쇼핑하는 곳</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='통학'" onMouseOut="this.innerHTML='자취?통학?'">자취?통학?</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='10cm'" onMouseOut="this.innerHTML='좋아하는 가수'">좋아하는 가수</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='김태리'" onMouseOut="this.innerHTML='좋아하는 배우'">좋아하는 배우</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='프렌즈'" onMouseOut="this.innerHTML='좋아하는 드라마'">좋아하는 드라마</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='형광노랑'" onMouseOut="this.innerHTML='싫어하는 색'">싫어하는 색</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='해산물'" onMouseOut="this.innerHTML='싫어하는 음식'">싫어하는 음식</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='소형견'" onMouseOut="this.innerHTML='싫어하는 동물'">싫어하는 동물</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='독일'" onMouseOut="this.innerHTML='여행가고싶은 국가'">여행가고싶은 국가</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='베트남'" onMouseOut="this.innerHTML='추천여행국가'">추천여행국가</a></li><li><a class="QNA" href=""onMouseOver="this.innerHTML='강릉'" onMouseOut="this.innerHTML='국내여행 추천'">국내여행추천</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='라코스테'" onMouseOut="this.innerHTML='신고있는 신발'">신고있는 신발</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='또바치킨'" onMouseOut="this.innerHTML='건대최애맛집'">건대최애맛집</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='W'" onMouseOut="this.innerHTML='건대최애술집'">건대최애술집</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='꿀주'" onMouseOut="this.innerHTML='좋아하는 술'">좋아하는 술</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='찌개류'" onMouseOut="this.innerHTML='좋아하는 안주'">좋아하는 안주</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='전공기초프로젝트2'" onMouseOut="this.innerHTML='이번학기 최애 과목'">이번학기 최애 과목</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='가락고등학교'" onMouseOut="this.innerHTML='출신고등학교'">출신고등학교</a></li>
+
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='유자차'" onMouseOut="this.innerHTML='최애 음료'">최애 음료</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='목방'" onMouseOut="this.innerHTML='동아리'">동아리</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='집앞 스타벅스'" onMouseOut="this.innerHTML='최애 카페'">최애 카페</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='천칭자리'" onMouseOut="this.innerHTML='별자리'">별자리</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='지하철'" onMouseOut="this.innerHTML='주이용 대중교통'">주이용 대중교통</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='로봇공학자'" onMouseOut="this.innerHTML='어린시절 꿈'">어린시절 꿈</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='개발자'" onMouseOut="this.innerHTML='현재 꿈'">현재 꿈</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='가을'" onMouseOut="this.innerHTML='좋아하는 계절'">좋아하는 계절</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='여름'" onMouseOut="this.innerHTML='싫어하는 계절'">싫어하는 계절</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='딱히 없다'" onMouseOut="this.innerHTML='받고싶은 선물'">받고싶은 선물</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='진로'" onMouseOut="this.innerHTML='요즘 최대 관심사'">요즘 최대 관심사</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='인터넷'" onMouseOut="this.innerHTML='킬링타임으로 하는 것'">킬링타임으로 하는 것</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='꿀떡'" onMouseOut="this.innerHTML='최애 떡'">최애 떡</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='초코소라빵'" onMouseOut="this.innerHTML='최애 빵'">최애 빵</a></li>
+							<li><a class="QNA" href=""onMouseOver="this.innerHTML='미세먼지 없이 선선한 바람이 부는 화창한 가을 날씨'" onMouseOut="this.innerHTML='좋아하는 날씨'">좋아하는 날씨</a></li>
+							
+						</ol>
+					</span>
+</div>
+
+
+        </aside><!---옆으로 미뤄지는거-->
+        
+	</div>
+	<footer id="main-footer"><a href="http://www.instgram.com/jjang_g_zero">Created By JIYOUNG JANG</a></footer> 
+</div>
+
+</body>
+</html>
